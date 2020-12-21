@@ -133,7 +133,7 @@ endif
 
 # Construct a Nix system name (like "i686-linux").
 #-------------------------------------------------
-if not build_on_windows
+#if not build_on_windows
   machine_name = host_machine.cpu()
   cpu_archs = ['x86_64', 'armv6', 'armv7', '']
 
@@ -153,7 +153,7 @@ if not build_on_windows
   config_h.set(
     'SYSTEM', system,
     description : 'platform identifier (`cpu-os`)')
-endif
+#endif
 
 
 
@@ -210,25 +210,11 @@ endif
 
 # Look for boost, a required dependency.
 #--------------------------------------------------
-if (get_option('with_boost') != '' and is_msvc)
-  boost_dep = declare_dependency(
-    include_directories : [get_option('with_boost') + '/include'],
-    link_args : ['-L' + get_option('with_boost') + '/lib' ])
-elif (get_option('with_boost') != '')
-  boost_dep = declare_dependency(
-    variables : {'dlls': get_option('with_boost') + '/bin/libboost_context-mt.dll'},
-    include_directories : [get_option('with_boost') + '/include'],
-    link_args : ['-L' + get_option('with_boost') + '/lib', '-lboost_context-mt' ])
-else
-  boost_dep = declare_dependency(
-    dependencies : [
-      cpp.find_library('boost_system'),
-      cpp.find_library('boost_context'),
-      cpp.find_library('boost_thread')
-    ],
-    link_args :  get_option('boost_link_args')
-  )
-endif
+boost_dep = dependency('boost', modules : [
+	'context',
+	'system',
+	'thread',
+])
 
 if (boost_dep.found())
     config_h.set('HAVE_BOOST', 1, description : 'Define if the Boost library is available.')
@@ -342,7 +328,7 @@ else
     dependencies : dependency(
         'libcurl',
         # Meson was getting confused for some reason
-        static : sys_name.contains('windows'),
+        static : false,
     ),
     link_args :  get_option('curl_link_args')
   )
