@@ -11,6 +11,20 @@ To find out more about the tool, usage and installation instructions, please
 read the manual, which is available on the Nix website at
 <http://nixos.org/nix/manual>.
 
+## Windows Notes
+
+To get started:
+
+1. Install MSYS2.
+2. Open a MSYS Mingw632 64bit window.
+3. Run `pacman -Syu`.
+4. Run `pacman -S `.
+5. Clone `https://github.com/nix-windows/nix`.
+6. `./bootstrap-meson.sh` will build it.
+
+Then you can move that to .... and then use the scripts to hack:
+...
+
 ## Contributing
 
 Take a look at the [Hacking Section](http://nixos.org/nix/manual/#chap-hacking)
