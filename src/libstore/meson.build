@@ -156,7 +156,7 @@ endif
 #============================================================================
 
 # FIXME: there is just no `sh`
-if not build_on_windows
+#if not build_on_windows
 gen_header = '''
   echo 'R"foo(' >> "$1"
   cat @INPUT@ >> "$1"
@@ -167,8 +167,8 @@ libstore_src += custom_target(
   'schema.sql.gen.hh',
   output : 'schema.sql.gen.hh',
   input : 'schema.sql',
-  command : [bash, '-c', gen_header, 'sh', '@OUTPUT@'])
-endif
+  command : ['bash', '-c', gen_header, 'sh', '@OUTPUT@'])
+#endif
 
 
 
