@@ -1,0 +1,314 @@
+Using 'PKG_CONFIG_PATH' from environment with value: 'C:\\msys64\\mingw64\\lib\\pkgconfig;C:\\msys64\\mingw64\\share\\pkgconfig'
+Using 'PKG_CONFIG_PATH' from environment with value: 'C:\\msys64\\mingw64\\lib\\pkgconfig;C:\\msys64\\mingw64\\share\\pkgconfig'
+The Meson build system
+Version: 0.56.0
+Source dir: C:/Users/User/code/nix
+Build dir: C:/Users/User/code/nix/build-gcc
+Build type: native build
+Project name: nix
+Project version: 2.1.3
+C++ compiler for the host machine: c++ (gcc 10.2.0 "c++ (Rev6, Built by MSYS2 project) 10.2.0")
+C++ linker for the host machine: c++ ld.bfd 2.35.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Message: system name: "x86_64-windows"
+Program flex found: YES (C:\msys64\usr\bin/flex.EXE)
+Program bison found: YES (C:\msys64\usr\bin/bison.EXE)
+Found pkg-config: C:\msys64\usr\bin/pkg-config.EXE (1.7.3)
+Run-time dependency Boost (found: context, system, thread) found: YES 1.74.0 (C:/msys64/mingw64)
+Using 'PKG_CONFIG_PATH' from environment with value: 'C:\\msys64\\mingw64\\lib\\pkgconfig;C:\\msys64\\mingw64\\share\\pkgconfig'
+Run-time dependency liblzma found: YES 5.2.5
+Library ssl found: YES
+Using 'PKG_CONFIG_PATH' from environment with value: 'C:\\msys64\\mingw64\\lib\\pkgconfig;C:\\msys64\\mingw64\\share\\pkgconfig'
+Run-time dependency sqlite3 found: YES 3.34.0
+Using 'PKG_CONFIG_PATH' from environment with value: 'C:\\msys64\\mingw64\\lib\\pkgconfig;C:\\msys64\\mingw64\\share\\pkgconfig'
+Run-time dependency libcurl found: YES 7.74.0
+Library dl found: NO
+Library bz2 found: YES
+Library sodium found: YES
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency bdw-gc found: NO (tried pkgconfig and cmake)
+Library gccpp found: NO
+Run-time dependency libeditline found: NO (tried pkgconfig and cmake)
+Has header "sys/stat.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "sys/dir.h" : NO 
+Has header "sys/ndir.h" : NO 
+Has header "dirent.h" : YES 
+Has header "locale.h" : YES 
+Has header "unistd.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "strings.h" : YES 
+Has header "string.h" : YES 
+Has header "bzlib.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "memory.h" : YES 
+Has header "editline.h" with dependency not-found: NO 
+Checking for function "lutimes" : NO 
+Checking for function "lchown" : NO 
+Checking for function "pipe2" : NO 
+Checking for function "posix_fallocate" : NO 
+Checking for function "setresuid" : NO 
+Checking for function "setreuid" : NO 
+Checking for function "statvfs" : NO 
+Checking for function "strsignal" : NO 
+Checking for function "sysconf" : NO 
+Checking if "pubsetbuf" compiles: YES 
+Checking whether type "struct dirent" has member "d_type" : NO 
+Configuring config.h using configuration
+Build targets in project: 11
+
+Found ninja-1.10.2 at C:\msys64\mingw64\bin/ninja.EXE
+[1/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_hash.cc.obj
+[2/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_thread-pool.cc.obj
+[3/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_json.cc.obj
+[4/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_logging.cc.obj
+In file included from C:/Users/User/code/nix/src/libutil/logging.cc:5:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[5/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_xml-writer.cc.obj
+[6/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_serialise.cc.obj
+[7/108] Generating schema.sql.gen.hh with a custom command (wrapped by meson because command contains newlines)
+[8/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_util.cc.obj
+C:/Users/User/code/nix/src/libutil/util.cc: In function 'void nix::replaceSymlink(const Path&, const Path&)':
+C:/Users/User/code/nix/src/libutil/util.cc:1374:21: warning: variable 'st' set but not used [-Wunused-but-set-variable]
+ 1374 |         SymlinkType st;
+      |                     ^~
+C:/Users/User/code/nix/src/libutil/util.cc: In function 'std::string nix::windowsEscape(const string&)':
+C:/Users/User/code/nix/src/libutil/util.cc:2671:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+ 2671 |         for (auto i=0; i < s.length(); ) {
+      |                        ~~^~~~~~~~~~~~
+C:/Users/User/code/nix/src/libutil/util.cc:2677:29: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<char>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+ 2677 |                     if (i+j == s.length()) {
+      |                         ~~~~^~~~~~~~~~~~~
+C:/Users/User/code/nix/src/libutil/util.cc: In function 'std::wstring nix::windowsEscapeW(const wstring&)':
+C:/Users/User/code/nix/src/libutil/util.cc:2705:26: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<wchar_t>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+ 2705 |         for (auto i=0; i < s.length(); ) {
+      |                        ~~^~~~~~~~~~~~
+C:/Users/User/code/nix/src/libutil/util.cc:2711:29: warning: comparison of integer expressions of different signedness: 'int' and 'std::__cxx11::basic_string<wchar_t>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+ 2711 |                     if (i+j == s.length()) {
+      |                         ~~~~^~~~~~~~~~~~~
+C:/Users/User/code/nix/src/libutil/util.cc: In function 'nix::SymlinkType nix::createSymlink(const Path&, const Path&)':
+C:/Users/User/code/nix/src/libutil/util.cc:1349:16: warning: 'st' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1349 |         return st;
+      |                ^~
+[9/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_affinity.cc.obj
+[10/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_derivations.cc.obj
+[11/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_crypto.cc.obj
+[12/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_binary-cache-store.cc.obj
+In file included from C:/Users/User/code/nix/src/libstore/binary-cache-store.cc:19:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[13/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_http-binary-cache-store.cc.obj
+[14/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_build.cc.obj
+In file included from C:/Users/User/code/nix/src/libstore/parsed-derivations.hh:3,
+                 from C:/Users/User/code/nix/src/libstore/build.cc:14:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+C:/Users/User/code/nix/src/libstore/build.cc: In member function 'void nix::DerivationGoal::startBuilder()':
+C:/Users/User/code/nix/src/libstore/build.cc:2092:23: warning: left operand of comma operator has no effect [-Wunused-value]
+ 2092 |                 throw("CreateDirectoryW when createTempDir '%1%'", tmpDir);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/User/code/nix/src/libstore/build.cc: In member function 'void nix::DerivationGoal::registerOutputs()':
+C:/Users/User/code/nix/src/libstore/build.cc:3614:14: warning: variable 'rewritten' set but not used [-Wunused-but-set-variable]
+ 3614 |         bool rewritten = false;
+      |              ^~~~~~~~~
+[15/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_download.cc.obj
+[16/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_export-import.cc.obj
+[17/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_gc.cc.obj
+C:/Users/User/code/nix/src/libstore/gc.cc: In function 'void nix::makeSymlink(const Path&, const Path&)':
+C:/Users/User/code/nix/src/libstore/gc.cc:95:17: warning: unused variable 'st' [-Wunused-variable]
+   95 |     SymlinkType st = createSymlink(target, tempLink);
+      |                 ^~
+C:/Users/User/code/nix/src/libstore/gc.cc: At global scope:
+C:/Users/User/code/nix/src/libstore/gc.cc:452:15: warning: 'std::string nix::quoteRegexChars(const string&)' defined but not used [-Wunused-function]
+  452 | static string quoteRegexChars(const string & raw)
+      |               ^~~~~~~~~~~~~~~
+[18/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_globals.cc.obj
+[19/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_local-binary-cache-store.cc.obj
+[20/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_legacy-ssh-store.cc.obj
+[21/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_local-fs-store.cc.obj
+[22/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_local-store.cc.obj
+[23/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_archive.cc.obj
+C:/Users/User/code/nix/src/libutil/archive.cc: In function 'void nix::dump(const Path&, const wstring&, const DWORD*, const uint64_t*, nix::Sink&, nix::PathFilter&)':
+C:/Users/User/code/nix/src/libutil/archive.cc:173:45: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  173 |                 if (wfd.cFileName[0] == '.' && wfd.cFileName[1] == '\0'
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[24/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_args.cc.obj
+[25/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_config.cc.obj
+[26/108] Compiling C++ object src/libutil/libnixutil.dll.p/C__Users_User_code_nix_src_libutil_compression.cc.obj
+[27/108] Compiling C++ object src/libmain/libnixmain.dll.p/C__Users_User_code_nix_src_libmain_stack.cc.obj
+[28/108] Compiling C++ object src/libmain/libnixmain.dll.p/C__Users_User_code_nix_src_libmain_shared.cc.obj
+[29/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_parsed-derivations.cc.obj
+In file included from C:/Users/User/code/nix/src/libstore/parsed-derivations.hh:3,
+                 from C:/Users/User/code/nix/src/libstore/parsed-derivations.cc:1:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[30/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_builtins_fetchurl.cc.obj
+[31/108] Linking target src/libutil/libnixutil.dll
+[32/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_builtins_buildenv.cc.obj
+[33/108] Compiling C++ object src/libmain/libnixmain.dll.p/C__Users_User_code_nix_src_libmain_common-args.cc.obj
+[34/108] Generating lexer_tab.[cchh] with a custom command
+[35/108] Generating parser_tab.[cchh] with a custom command
+[36/108] Generating symbol file src/libutil/libnixutil.dll.p/libnixutil.dll.symbols
+[37/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_common-eval-args.cc.obj
+[38/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_attr-set.cc.obj
+[39/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_store-api.cc.obj
+[40/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_primops_fromTOML.cc.obj
+[41/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_primops_fetchMercurial.cc.obj
+In file included from C:/Users/User/code/nix/src/libexpr/primops/fetchMercurial.cc:12:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[42/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_primops_fetchGit.cc.obj
+In file included from C:/Users/User/code/nix/src/libexpr/primops/fetchGit.cc:16:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[43/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_attr-path.cc.obj
+[44/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/meson-generated_.._lexer-tab.cc.obj
+[45/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/meson-generated_.._parser-tab.cc.obj
+[46/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_eval.cc.obj
+[47/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_add-to-store.cc.obj
+[48/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_json-to-value.cc.obj
+[49/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_build.cc.obj
+[50/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_names.cc.obj
+[51/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_nixexpr.cc.obj
+[52/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_get-drvs.cc.obj
+[53/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_primops.cc.obj
+[54/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_value-to-xml.cc.obj
+[55/108] Compiling C++ object src/libexpr/libnixexpr.dll.p/C__Users_User_code_nix_src_libexpr_value-to-json.cc.obj
+[56/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_legacy.cc.obj
+[57/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_edit.cc.obj
+[58/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_command.cc.obj
+[59/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_cat.cc.obj
+In file included from C:/Users/User/code/nix/src/nix/cat.cc:9:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[60/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_ls.cc.obj
+[61/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_copy.cc.obj
+[62/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_dump-path.cc.obj
+[63/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_main.cc.obj
+[64/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_installables.cc.obj
+[65/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_hash.cc.obj
+[66/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_eval.cc.obj
+[67/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_log.cc.obj
+[68/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_optimise-store.cc.obj
+[69/108] Compiling C++ object src/nix-instantiate/nix-instantiate.exe.p/C__Users_User_code_nix_src_nix-instantiate_nix-instantiate.cc.obj
+[70/108] Compiling C++ object src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_nix-store.cc.obj
+[71/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_verify.cc.obj
+[72/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_show-derivation.cc.obj
+[73/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_why-depends.cc.obj
+[74/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_search.cc.obj
+[75/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_run.cc.obj
+[76/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_sigs.cc.obj
+[77/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_path-info.cc.obj
+[78/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_progress-bar.cc.obj
+[79/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_show-config.cc.obj
+[80/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_upgrade-nix.cc.obj
+[81/108] Compiling C++ object src/nix/nix.exe.p/C__Users_User_code_nix_src_nix_ping-store.cc.obj
+[82/108] Compiling C++ object src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_dotgraph.cc.obj
+[83/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_nar-info.cc.obj
+[84/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_misc.cc.obj
+In file included from C:/Users/User/code/nix/src/libstore/parsed-derivations.hh:3,
+                 from C:/Users/User/code/nix/src/libstore/misc.cc:2:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[85/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_remote-fs-accessor.cc.obj
+C:/Users/User/code/nix/src/libstore/remote-fs-accessor.cc: In lambda function:
+C:/Users/User/code/nix/src/libstore/remote-fs-accessor.cc:86:98: warning: comparison of integer expressions of different signedness: 'uint64_t' {aka 'long long unsigned int'} and 'LONGLONG' {aka 'long long int'} [-Wsign-compare]
+   86 |                     if (!SetFilePointerEx(fd.get(), setOffset, &newOffset, FILE_BEGIN) || offset != newOffset.QuadPart)
+      |                                                                                           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+[86/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_machines.cc.obj
+[87/108] Compiling C++ object src/nix-build/nix-build.exe.p/C__Users_User_code_nix_src_nix-build_nix-build.cc.obj
+[88/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_nar-info-disk-cache.cc.obj
+[89/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_profiles.cc.obj
+[90/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_nar-accessor.cc.obj
+In file included from C:/Users/User/code/nix/src/libstore/nar-accessor.cc:9:
+../src/nlohmann/json.hpp:313:13: warning: redundant redeclaration of 'constexpr' static data member 'nlohmann::detail::static_const<T>::value' [-Wdeprecated]
+  313 | constexpr T static_const<T>::value;
+      |             ^~~~~~~~~~~~~~~
+../src/nlohmann/json.hpp:309:24: note: previous declaration of 'nlohmann::detail::static_const<T>::value'
+  309 |     static constexpr T value{};
+      |                        ^~~~~
+[91/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_references.cc.obj
+[92/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_ssh-store.cc.obj
+[93/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_optimise-store.cc.obj
+[94/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_pathlocks.cc.obj
+C:/Users/User/code/nix/src/libstore/pathlocks.cc: In function 'bool nix::lockFile(HANDLE, nix::LockType, bool)':
+C:/Users/User/code/nix/src/libstore/pathlocks.cc:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+  168 | }
+      | ^
+[95/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_ssh.cc.obj
+C:/Users/User/code/nix/src/libstore/ssh.cc: In member function 'std::unique_ptr<nix::SSHMaster::Connection> nix::SSHMaster::startCommand(const string&)':
+C:/Users/User/code/nix/src/libstore/ssh.cc:74:23: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+   74 | fprintf(stderr, "%s:%lu abort\n", __FILE__, __LINE__);fflush(stderr);
+      |                     ~~^                     ~~~~~~~~
+      |                       |                     |
+      |                       long unsigned int     int
+      |                     %u
+C:/Users/User/code/nix/src/libstore/ssh.cc: In member function 'nix::Path nix::SSHMaster::startMaster()':
+C:/Users/User/code/nix/src/libstore/ssh.cc:131:23: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+  131 | fprintf(stderr, "%s:%lu abort\n", __FILE__, __LINE__);fflush(stderr);
+      |                     ~~^                     ~~~~~~~~
+      |                       |                     |
+      |                       long unsigned int     int
+      |                     %u
+[96/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_s3-binary-cache-store.cc.obj
+[97/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_remote-store.cc.obj
+[98/108] Compiling C++ object src/libstore/libnixstore.dll.p/C__Users_User_code_nix_src_libstore_sqlite.cc.obj
+[99/108] Linking target src/libstore/libnixstore.dll
+[100/108] Generating symbol file src/libstore/libnixstore.dll.p/libnixstore.dll.symbols
+[101/108] Linking target src/libmain/libnixmain.dll
+[102/108] Generating symbol file src/libmain/libnixmain.dll.p/libnixmain.dll.symbols
+[103/108] Linking target src/libexpr/libnixexpr.dll
+[104/108] Generating symbol file src/libexpr/libnixexpr.dll.p/libnixexpr.dll.symbols
+[105/108] Linking target src/nix-instantiate/nix-instantiate.exe
+FAILED: src/nix-instantiate/nix-instantiate.exe 
+"c++"  -o src/nix-instantiate/nix-instantiate.exe src/nix-instantiate/nix-instantiate.exe.p/C__Users_User_code_nix_src_nix-instantiate_nix-instantiate.cc.obj "-L/usr/local/lib" "-L/usr/lib" "-L/lib" "-Wl,--allow-shlib-undefined" "-Wl,--start-group" "src/libutil/libnixutil.dll.a" "src/libstore/libnixstore.dll.a" "src/libmain/libnixmain.dll.a" "src/libexpr/libnixexpr.dll.a" "C:/msys64/mingw64/lib/libboost_system-mt.dll.a" "C:/msys64/mingw64/lib/libboost_thread-mt.dll.a" "C:/msys64/mingw64/lib/libboost_context-mt.dll.a" "-pthread" "-L/usr/local/lib" "-lsodium" "-lsodium" "-Wl,--subsystem,console" "-lkernel32" "-luser32" "-lgdi32" "-lwinspool" "-lshell32" "-lole32" "-loleaut32" "-luuid" "-lcomdlg32" "-ladvapi32" "-Wl,--end-group"
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src/nix-instantiate/nix-instantiate.exe.p/C__Users_User_code_nix_src_nix-instantiate_nix-instantiate.cc.obj:nix-instantiate.cc:(.rdata$.refptr._ZN3nix21RegisterLegacyCommand8commandsB5cxx11E[.refptr._ZN3nix21RegisterLegacyCommand8commandsB5cxx11E]+0x0): undefined reference to `nix::RegisterLegacyCommand::commands[abi:cxx11]'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): in function `main':
+C:/_/M/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+[106/108] Linking target src/nix-store/nix-store.exe
+FAILED: src/nix-store/nix-store.exe 
+"c++"  -o src/nix-store/nix-store.exe src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_dotgraph.cc.obj src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_nix-store.cc.obj "-L/usr/local/lib" "-L/usr/lib" "-L/lib" "-Wl,--allow-shlib-undefined" "-Wl,--start-group" "src/libutil/libnixutil.dll.a" "src/libstore/libnixstore.dll.a" "src/libmain/libnixmain.dll.a" "src/libexpr/libnixexpr.dll.a" "C:/msys64/mingw64/lib/libboost_system-mt.dll.a" "C:/msys64/mingw64/lib/libboost_thread-mt.dll.a" "C:/msys64/mingw64/lib/libboost_context-mt.dll.a" "-pthread" "-L/usr/local/lib" "-lsodium" "-lsodium" "-Wl,--subsystem,console" "-lkernel32" "-luser32" "-lgdi32" "-lwinspool" "-lshell32" "-lole32" "-loleaut32" "-luuid" "-lcomdlg32" "-ladvapi32" "-Wl,--end-group"
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_nix-store.cc.obj:C:/Users/User/code/nix/src/nix-store/nix-store.cc:412: undefined reference to `nix::printGraphML(nix::ref<nix::Store>, std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src/nix-store/nix-store.exe.p/C__Users_User_code_nix_src_nix-store_nix-store.cc.obj:nix-store.cc:(.rdata$.refptr._ZN3nix21RegisterLegacyCommand8commandsB5cxx11E[.refptr._ZN3nix21RegisterLegacyCommand8commandsB5cxx11E]+0x0): undefined reference to `nix::RegisterLegacyCommand::commands[abi:cxx11]'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o): in function `main':
+C:/_/M/mingw-w64-crt-git/src/mingw-w64/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+[107/108] Linking target src/nix/nix.exe
+ninja: build stopped: subcommand failed.
