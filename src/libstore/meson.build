@@ -41,11 +41,11 @@ libstore_src_files = [
     join_paths(meson.source_root(), 'src/libstore/store-api.cc'),
     join_paths(meson.source_root(), 'src/libstore/builtins/buildenv.cc'),
     join_paths(meson.source_root(), 'src/libstore/builtins/fetchurl.cc'),
+    join_paths(meson.source_root(), 'src/libstore/parsed-derivations.cc'),
 ]
 if not build_on_windows
   libstore_src_files += [
     join_paths(meson.source_root(), 'src/libstore/daemon.cc'),
-    join_paths(meson.source_root(), 'src/libstore/parsed-derivations.cc'),
   ]
 endif
 libstore_src = files(libstore_src_files)
@@ -75,11 +75,12 @@ libstore_headers_files = [
     join_paths(meson.source_root(), 'src/libstore/ssh.hh'),
     join_paths(meson.source_root(), 'src/libstore/store-api.hh'),
     join_paths(meson.source_root(), 'src/libstore/worker-protocol.hh'),
+    join_paths(meson.source_root(), 'src/libstore/parsed-derivations.hh'),
 ]
 if not build_on_windows
   libstore_headers_files += [
     join_paths(meson.source_root(), 'src/libstore/daemon.hh'),
-    join_paths(meson.source_root(), 'src/libstore/parsed-derivations.hh'),
+    #join_paths(meson.source_root(), 'src/libstore/parsed-derivations.hh'),
   ]
 endif
 libstore_headers = files(libstore_headers_files)
