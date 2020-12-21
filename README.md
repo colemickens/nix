@@ -13,6 +13,7 @@ read the manual, which is available on the Nix website at
 
 ## Windows Notes
 
+These steps can be carried out in the free VM Developer image that Microsoft offers.
 To get started:
 
 1. Install MSYS2.
