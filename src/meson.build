@@ -13,11 +13,11 @@ if not build_on_windows
     'resolve-system-dependencies'
   ]
 else
-  src_dirs += [
-    'nix-build',
-    'nix-store',
-    'nix-instantiate',
-  ]
+  #src_dirs += [
+  #  'nix-build',
+  #  'nix-store',
+  #  'nix-instantiate',
+  #]
 endif
 
 foreach dir : src_dirs

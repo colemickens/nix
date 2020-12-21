@@ -50,7 +50,7 @@ nix_link_list = [
     libexpr_lib
 ]
 
-nix_link_args = []
+nix_link_args = [ '-lwindows' ]
 
 
 
@@ -79,6 +79,7 @@ nix_bin = executable(
     install_dir : bindir,
     include_directories : src_inc,
     sources : nix_src,
+    link_args : '-lmingw32',
     link_with : nix_link_list,
     dependencies : nix_dep_list)
 

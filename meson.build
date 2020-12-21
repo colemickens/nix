@@ -17,8 +17,8 @@ project(
     default_options : [
         'cpp_std=c++17',
     ],
-#   version : run_command('cat', './.version').stdout().strip(),
-    version : '2.1.3', # no cat so far
+    version : run_command('cat', './.version').stdout().strip(),
+#    version : '2.1.3', # no cat so far
     license : 'MIT'
 )
 
@@ -242,16 +242,12 @@ endif
 
 # Look for libbrotli{enc,dec}.
 #--------------------------------------------------
-if build_on_windows
-  # todo
-  libbrotli_dep = dependency('', required: false)
-else
-  libbrotli_dep = declare_dependency(
-    dependencies: [
-        dependency('libbrotlienc'),
-        dependency('libbrotlidec')],
-    link_args :  get_option('brotli_link_args'))
-endif
+
+libbrotli_dep = declare_dependency(
+  dependencies: [
+      dependency('libbrotlienc'),
+      dependency('libbrotlidec')],
+  link_args :  get_option('brotli_link_args'))
 
 # Look for OpenSSL, a required dependency.
 #--------------------------------------------------
